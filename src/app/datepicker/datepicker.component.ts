@@ -21,7 +21,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class DatepickerComponent implements OnInit {
 
   minDate = new Date(2010, 0, 1);
-  maxDate = new Date(2020, 0, 1);
+  maxDate = new Date(2020, 12, 1);
   dateFormControl = new FormControl('', [Validators.required, Validators.pattern("^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$")]);
 
   matcher = new MyErrorStateMatcher();

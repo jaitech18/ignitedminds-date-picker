@@ -1,0 +1,20 @@
+<div style="text-align: center;padding-top:150px;">
+  <h2>Date picker POC</h2>
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+         <mat-label>Date</mat-label>
+         <input  matInput [formControl]="dateFormControl" [errorStateMatcher]="matcher"
+                placeholder="01/01/2022" [matDatepicker]="picker" [min]="minDate" [max]="maxDate">
+         <mat-hint>DD/MM/YYYY</mat-hint>
+         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+         <mat-datepicker #picker></mat-datepicker>
+         <mat-error *ngIf="dateFormControl.hasError('date') && !dateFormControl.hasError('required')">
+           Please enter a valid date
+         </mat-error>
+         <mat-error *ngIf="dateFormControl.hasError('required')">
+           Date is <strong>required</strong>
+         </mat-error>
+       </mat-form-field>
+       </form>
+       
+</div>
